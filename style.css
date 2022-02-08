@@ -48,6 +48,7 @@ body{
     align-items:center;
     color:transparent;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
 }
 
 .available{
@@ -59,7 +60,6 @@ body{
 
 .seats:hover{
     background-color: #313552;
-    color: white;
 }
 
 .row{

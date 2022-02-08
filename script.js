@@ -64,7 +64,15 @@ window.addEventListener('DOMContentLoaded',()=>{
         if(item['status']=='available')
         {
             seat.style.cursor = 'pointer';
-            seat.style.color = '#313552';
+            seat.addEventListener('mouseover',()=>
+            {
+                if(item['status']=='available')
+                seat.style.color = '#313552';
+            });
+            seat.addEventListener('mouseout',()=>
+            {
+                seat.style.color = 'transparent';
+            });
         }
         else{
             seat.style.cursor = 'default';
