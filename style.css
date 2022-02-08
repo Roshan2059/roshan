@@ -1,50 +1,97 @@
 body{
-    background-color: pink;
+    background-color: rgb(240, 214, 218);
     margin: 0;
     padding: 0;
 }
 
-nav{
-    background-color: purple;
-    position: fixed;
-    top: 0;
+.first-container{
     width: 100%;
-    height: 62px;
-}
-
-nav span{
-    float: left;
-    font-family: constantia;
-    padding-bottom: 20px;
-    font-size: 50px;
+    height: 65px;
+    background-color: purple;
     color: white;
 }
 
-nav ul{
-    list-style: none;
-    margin-left: 400px;
-}
-
-nav ul li a{
-    text-decoration: none;
-    float: left;
-    font-size: 22px;
-    text-align: center;
-    font-family: sans-serif;
-    color: white;
+.first-container .big{
     padding-left: 30px;
-    padding-right: 30px;
+    font-size: 50px;
+    font-family: constantia;
 }
 
-nav ul li a:hover{
-    background-color: white;
-    color: purple;
-    height: 62px;
+.first-container .small{
+    padding-left: 300px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#seat-container{
+  width: 100%;
+}
+
+#seat-container h4{
+    text-align: center;
+}
+
+hr{
+    border: 2px solid purple;
+    width: 50%;
 }
 
 .seats{
     display: grid;
-    border: 2px solid red;
+    border: 2px solid purple;
     height: 20px;
     width: 20px;
+    margin: 10px;
+}
+
+.seats:hover{
+    background-color: purple;
+    color: white;
+}
+
+.first-row{
+    display:flex;
+}
+.second-row{
+    display:flex;
+}
+.third-row{
+    display:flex;
+}
+.fourth-row{
+    display:flex;
+}
+.fifth-row{
+    display:flex;
+}
+.sixth-row{
+    display:flex;
+}
+.seventh-row{
+    display:flex;
+}
+.eighth-row{
+    display:flex;
+}
+.ninth-row{
+    display:flex;
+}
+.tenth-row{
+    display:flex;
+}
+
+.first-box{
+    margin-left: 240px;
+    display: inline-block;
+}
+
+.second-box{
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.third-box{
+    margin-left: 40px;
+    display: inline-block;
 }
