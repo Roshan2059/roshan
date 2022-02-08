@@ -1,20 +1,20 @@
 //container, box and row
 // import { todayData } from "./data";
 
+const letterProvider = function(n)
+{
+    letters = 'abcdefghijklmnopqrstuvwxyz';
+    each = letters.split('');
+    len = each.length;
+    if(n<len && n>=0)
+    {
+        return each[n].toUpperCase();
+    }
+    return 0;
+}
 function createData(num){
     let arr = new Array();
-
-    const letterProvider = function(n)
-    {
-        letters = 'abcdefghijklmnopqrstuvwxyz';
-        each = letters.split('');
-        len = each.length;
-        if(n<len && n>=0)
-        {
-            return each[n].toUpperCase();
-        }
-        return 0;
-    }
+    
 
     const statusProvider = function()
     {
@@ -22,26 +22,27 @@ function createData(num){
         return state[Math.floor(Math.random()*3)];
     }
 
-    for(i=1;i<=num;i++)
+    for(i=0;i<num;i++)
     {
-        col = i%16;
-        row = Math.floor(i/16);
+        col = i%15;
+        row = Math.floor(i/15);
         
         arr.push({
-            "seat_id":`${letterProvider(row)}${col}`,
+            "seat_id":`${letterProvider(row)}${col+1}`,
             "status":statusProvider()
         });
     }
     return arr;
 }
 
-const todayData = createData(105);
+const todayData = createData(120);
 console.log(todayData);
 
 let selectedSeats = [];
 
 
 const container = document.getElementById('seat-container');
+const zeroBox  = document.getElementById('zero-box');
 const firstBox  = document.getElementById('first-box');
 const secondBox  = document.getElementById('second-box');
 const thirdBox  = document.getElementById('third-box');
@@ -50,8 +51,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     // #40e3a7
     const colormap = {
         "available":"none",
-        "reserved":"#426aed",
-        "booked":"#ed4245"
+        "reserved":"#2EB086",
+        "booked":"#f55142"
     }
     function createSeat(item,index,arr)
     {
@@ -59,6 +60,27 @@ window.addEventListener('DOMContentLoaded',()=>{
         seat.className = 'seats';
         seat.innerText = item['seat_id'];
         seat.style.background = colormap[item['status']];
+        seat.part.value = item['status'];
+        if(item['status']=='available')
+        {
+            seat.style.cursor = 'pointer';
+            seat.style.color = '#313552';
+        }
+        else{
+            seat.style.cursor = 'default';
+        }
+
+        //Adding the letter index for each new column
+        if (index%15 == 0){
+            const ind = document.createElement('div');
+            ind.className = 'seats';
+            ind.style.background = 'none';
+            ind.innerText = letterProvider(Math.floor(index/15));
+            ind.style.color = '#313552';
+            ind.style.border = '2px solid transparent';
+            zeroBox.appendChild(ind);
+        }
+
 
         let bar = Math.floor((index%15)/5); 
         if(bar == 0)
@@ -88,14 +110,23 @@ window.addEventListener('DOMContentLoaded',()=>{
 const seats = document.getElementsByClassName('seats');
 
 container.addEventListener('click',(event)=>{
-    console.log(event);
+    // console.log(event);
     const isSeat = event.target.className == 'seats';
-    if(isSeat)
+    const value = event.target.part.value;
+    if(isSeat && !(value=='reserved' || value=='booked'))
     {
         seatText = event.target.innerText;
-        if(selectedSeats.includes(seatText))
-        event.target.style.background = 'blue';
-        selectedSeats.push(seatText);
-        console.log(selectedSeats);
+        if(!selectedSeats.includes(seatText))
+        {
+            event.target.style.background = '#313552';
+            selectedSeats.push(seatText);
+            console.log(selectedSeats);
+        }
+        else
+        {
+            event.target.style.background = 'none';
+            selectedSeats = selectedSeats.filter(item=>item!==seatText);
+            console.log(selectedSeats);
+        }
     }
 })
