@@ -86,6 +86,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             ind.innerText = letterProvider(Math.floor(index/15));
             ind.style.color = '#313552';
             ind.style.border = '2px solid transparent';
+            ind.style.padding = '4px';
             zeroBox.appendChild(ind);
         }
 
@@ -105,13 +106,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             thirdBox.appendChild(seat);
         }
     }
-    // const seat = document.createElement('div');
-    //     seat.className = 'seats';
-    //     seat.innerText = 'a1';
-    //     seat.style.background = 'green';
-    // secondBox.appendChild(seat);
-    // firstBox.appendChild(seat);
-    // // thirdBox.appendChild(seat);
     todayData.forEach(createSeat);
 });
 
