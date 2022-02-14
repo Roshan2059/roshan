@@ -12,7 +12,6 @@
 <body>
     <?php
     include 'db_queries.php';
-    ?>
     
         function debug($arre){
             echo "<pre>";
