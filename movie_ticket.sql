@@ -42,7 +42,7 @@ CREATE TABLE `booking` (
 
 CREATE TABLE `seat` (
   `seat_id` varchar(5) NOT NULL,
-  `row` int(11) NOT NULL,
+  `row` varchar(11) NOT NULL,
   `columns` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

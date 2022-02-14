@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php
+    include 'db_queries.php';
+    ?>
+    
     <div class="first-container">
             <span class="big">MUSK  Theater</span>
              <span class="small">online ticket reservation</span>   
@@ -34,7 +38,7 @@
         </div>
        
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
