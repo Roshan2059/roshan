@@ -53,15 +53,32 @@ body{
     user-select: none;
 }
 
-.available{
+.available,.selected{
     cursor:pointer;
 }
 .available:hover{
-    color:#313552;
+    background-color: #313552;
+    color:white;
 }
 
-.seats:hover{
-    background-color: #313552;
+.reserved{
+    background:orange;
+}
+
+.booked{
+    background:rgb(243, 24, 24);
+}
+
+.selected{
+    background: #313552;
+    color: transparent;
+}
+
+#seatlabel{
+    background:none;
+    color:#313552;
+    border:1px solid transparent;
+    /* padding:4px; */
 }
 
 .row{

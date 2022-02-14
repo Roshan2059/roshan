@@ -54,79 +54,84 @@ window.addEventListener('DOMContentLoaded',()=>{
         "reserved":"#2EB086",
         "booked":"#f55142"
     }
-    function createSeat(item,index,arr)
-    {
-        const seat = document.createElement('div');
-        seat.className = 'seats';
-        seat.innerText = item['seat_id'];
-        seat.style.background = colormap[item['status']];
-        seat.part.value = item['status'];
-        if(item['status']=='available')
-        {
-            seat.style.cursor = 'pointer';
-            seat.addEventListener('mouseover',()=>
-            {
-                if(item['status']=='available')
-                seat.style.color = '#313552';
-            });
-            seat.addEventListener('mouseout',()=>
-            {
-                seat.style.color = 'transparent';
-            });
-        }
-        else{
-            seat.style.cursor = 'default';
-        }
+    // function createSeat(item,index,arr)
+    // {
+    //     const seat = document.createElement('div');
+    //     seat.className = 'seats';
+    //     seat.innerText = item['seat_id'];
+    //     seat.style.background = colormap[item['status']];
+    //     seat.part.value = item['status'];
+    //     if(item['status']=='available')
+    //     {
+    //         seat.style.cursor = 'pointer';
+    //         seat.addEventListener('mouseover',()=>
+    //         {
+    //             if(item['status']=='available')
+    //             seat.style.color = '#313552';
+    //         });
+    //         seat.addEventListener('mouseout',()=>
+    //         {
+    //             seat.style.color = 'transparent';
+    //         });
+    //     }
+    //     else{
+    //         seat.style.cursor = 'default';
+    //     }
 
-        //Adding the letter index for each new column
-        if (index%15 == 0){
-            const ind = document.createElement('div');
-            ind.className = 'seats';
-            ind.style.background = 'none';
-            ind.innerText = letterProvider(Math.floor(index/15));
-            ind.style.color = '#313552';
-            ind.style.border = '2px solid transparent';
-            ind.style.padding = '4px';
-            zeroBox.appendChild(ind);
-        }
+    //     //Adding the letter index for each new column
+    //     if (index%15 == 0){
+    //         const ind = document.createElement('div');
+    //         ind.className = 'seats';
+    //         ind.style.background = 'none';
+    //         ind.innerText = letterProvider(Math.floor(index/15));
+    //         ind.style.color = '#313552';
+    //         ind.style.border = '2px solid transparent';
+    //         ind.style.padding = '4px';
+    //         zeroBox.appendChild(ind);
+    //     }
 
 
-        let bar = Math.floor((index%15)/5); 
-        if(bar == 0)
-        {
-            firstBox.appendChild(seat);
-            console.log()
-        }
-        else if(bar == 1)
-        {
-            secondBox.appendChild(seat);
-        }
-        else if(bar == 2)
-        {
-            thirdBox.appendChild(seat);
-        }
-    }
-    todayData.forEach(createSeat);
+    //     let bar = Math.floor((index%15)/5); 
+    //     if(bar == 0)
+    //     {
+    //         firstBox.appendChild(seat);
+    //         console.log()
+    //     }
+    //     else if(bar == 1)
+    //     {
+    //         secondBox.appendChild(seat);
+    //     }
+    //     else if(bar == 2)
+    //     {
+    //         thirdBox.appendChild(seat);
+    //     }
+    // }
+    // todayData.forEach(createSeat);
 });
 
 const seats = document.getElementsByClassName('seats');
 
 container.addEventListener('click',(event)=>{
-    // console.log(event);
-    const isSeat = event.target.className == 'seats';
-    const value = event.target.part.value;
+    console.log(event);
+    const isSeat = Object.keys(event.target.classList).some((k)=>(event.target.classList[k]==='seats'));
+    console.log(event.target.classList);
+    console.log(isSeat);
+    const value = event.target.dataset.status;
     if(isSeat && !(value=='reserved' || value=='booked'))
     {
         seatText = event.target.innerText;
         if(!selectedSeats.includes(seatText))
         {
-            event.target.style.background = '#313552';
+            // event.target.style.background = '#313552';
+            event.target.className = 'seats selected';
             selectedSeats.push(seatText);
             console.log(selectedSeats);
         }
         else
         {
-            event.target.style.background = 'none';
+            
+            event.target.className = 'seats available';
+            // event.target.style.background = 'none';
             selectedSeats = selectedSeats.filter(item=>item!==seatText);
             console.log(selectedSeats);
         }
