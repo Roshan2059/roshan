@@ -11,8 +11,8 @@
 
 <body>
     <?php
-    include 'db_queries.php';
-    
+    // include 'db_queries.php';
+
         function debug($arre){
             echo "<pre>";
             print_r($arre);
@@ -158,7 +158,7 @@
         </div>
        
     </div>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
