@@ -32,4 +32,6 @@ address
 
 User ,  show  ,   seat  ,  booking  ,  seatbook  
 
-changed row int to varchar 
+changed row int to varchar
+
+Just made the landing page for the user to login
