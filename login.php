@@ -11,7 +11,8 @@
     <title>Hello, world!</title>
   </head>
   <body>
-      <?php require 'partials/_nav.php';
+      <?php 
+      require 'partials/_nav.php';
       include 'connection.php';
         $login = false;
         if($_SERVER['REQUEST_METHOD'] == "POST")
