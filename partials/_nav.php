@@ -1,43 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<?php
+  session_start();
+  $loggedin = false;
+  if(isset($_SESSION['loggedin'])&& $_SESSION['loggedin']==true)
+  {
+    $loggedin = true;
+  }
+?>
+
+<nav class="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/movieticket/login.php">RJ Motions</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand middle" href="/movieticket/welcome.php">RJ Movies</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    </button> -->
+    <div>
+      <ul class="navbar-nav">
+        <button type="button" class="btn btn-primary nav-item" onclick="location.href='ticket.php';">Book Now</button>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php">Home</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="/movieticket/login.php">Login</a>
+          <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/movieticket/signup.php">Signup</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/movieticket/logout.php">logout</a>
-        </li>
-        <button type="button" class="btn btn-primary">Book Now</button>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
+        <?php
+          if($loggedin)
+          {
+          echo '
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/movieticket/logout.php">logout</a>
+          </li>';
+          }
+          else
+          {
+            echo '
+            <li class="nav-item">
+              <a class="nav-link" href="/movieticket/login.php">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/movieticket/signup.php">Signup</a>
+            </li>';
+          }
+        ?>
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>

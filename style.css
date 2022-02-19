@@ -1,10 +1,28 @@
+/* Global styles */
 
-body{
-    background-color: #EEE6CE;
+*{
     margin: 0;
     padding: 0;
+    --primary: #5e00c9;
+    --primaryA: #313552;
+    --secondary: rgb(253, 22, 115);
+    --background: #EEE6CE;
+    --textone: black;
+    --texttwo: white;
 }
 
+body{
+    background-color: var(--background);
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styles for the tickets page */
 .first-container{
     width: 100%;
     height: 65px;
@@ -98,3 +116,255 @@ body{
     flex-wrap: wrap;
     margin-right: -20px;
 }
+
+
+
+
+/* Styles for navigation */
+
+nav.navbar{
+    background: var(--primary);
+    background: linear-gradient(90deg, var(--primaryA) 0%, var(--primary) 100%);
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+
+}
+
+.container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-fluid>div{
+    width:fit-content;
+}
+
+.navbar-brand{
+    text-decoration: none;
+    color:var(--texttwo);
+    margin: 0 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:x-large;
+}
+
+.navbar-nav{
+    width:100%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:var(--texttwo);
+}
+
+.nav-item{
+    margin: 1.5em;
+}
+
+.btn{
+    padding: 0.7em;
+    margin: 1em;
+    border: 2px;
+    color:var(--texttwo);
+    background: var(--secondary);
+    border-radius: 10px;
+}
+
+
+/* Homepage styles by Roshan Panta */
+#home {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.home1 {
+    transform: translate(130px, 0px);
+    width: 50%;
+    height: 590px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#w{
+    text-decoration: line-through;
+    color: var(--secondary);
+}
+
+#w span{
+    color: var(--primary);
+}
+
+.home1 h1 {
+    width: 95%;
+    display: inline-block;
+    padding-top: 50px;
+    font-size: 20px;
+    color: var(--primary);
+    font-family: 'constantia', sans-serif;
+}
+
+.home1 strike {
+    font-size: 50px;
+    color: rgb(253, 51, 84);
+    font-family: 'Roboto', sans-serif;
+}
+
+.home1 h2 {
+    padding-top: 50px;
+    display: inline-block;
+    color: var(--primary);
+    font-size: 70px;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home1 button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 170px;
+    height: 50px;
+}
+
+.home1 button:hover{
+    transition: 0.5s ease;
+    background-color: white;
+    color: var(--secondary);
+    border: var(--secondary) solid 2.5px;
+}
+
+.home2 {
+    width: 50%;
+    height: 578px;
+    float: right;
+    object-fit: cover;
+}
+
+.home2 img {
+    padding-left: 70px;
+}
+
+#about_us {
+    float: left;
+    height: 590px;
+    width: 100%;
+    background-image: url(about.jpg);
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+.au_content {
+    padding-top: 30px;
+    float: right;
+    width: 70%;
+    height: 500px;
+    text-align: center;
+}
+
+.au_content h1 {
+    font-size: 40px;
+    font-family: Constantia;
+    color: var(--primary);
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.au_content p {
+    line-height: 2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+footer {
+    float: left;
+    color: var(--primary);
+    height: 280px;
+  }
+  
+  footer h1 {
+    font-family: constantia;
+    margin-bottom: 30px;
+    margin-block-start: 30px;
+  }
+  
+  footer #foot {
+    width: 100%;
+    display: inline-flex;
+  }
+  
+  footer div #foot1 {
+    display: inline;
+    font-family: sans-serif;
+    height: auto;
+    margin-left: 300px;
+  }
+  
+  footer div #foot1 ul {
+    list-style: none;
+  }
+  
+  footer div #foot1 ul li {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  
+  footer div #foot2 {
+    display: inline;
+    font-family: sans-serif;
+    margin-left: 200px;
+  }
+  
+  footer div #foot2 ul {
+    list-style: none;
+  }
+  
+  footer div #foot2 ul li {
+    padding-bottom: 5px;
+  }
+  
+  footer div #foot2 ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+  
+  footer div #foot3 {
+    display: inline;
+    font-family: sans-serif;
+    margin-left: 200px;
+  }
+  
+  #last {
+    margin-left: 480px;
+    width: 50%;
+    margin-top: 35px;
+    font-family: sans-serif;
+    font-size: 18px;
+  }
+  
+  #foot3 ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  #foot3 ul li i {
+    font-size: 30px;
+    padding: 10px;
+  }
+  

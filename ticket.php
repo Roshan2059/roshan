@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
+    {
+        header("location: login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,12 +87,12 @@
             "selected"=>"seats booked"
         ];
 
-    ?>
-    <div class="first-container">
-            <span class="big">MUSK Theater</span>
-             <span class="small">online ticket reservation</span>   
-    </div>
-    
+     ?>
+    <!-- // <div class="first-container">
+    //         <span class="big">MUSK Theater</span>
+    //          <span class="small">online ticket reservation</span>   
+    // </div> -->
+    <?php require 'partials/_nav.php'; ?>
     <div id="seat-container">
         <h4>Screen Here</h4>
         <div id="zero-box">

@@ -4,25 +4,81 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <title>Welcome</title>
   </head>
   <body>
-      <?php require 'partials/_nav.php'?>
-    <h1>Hello, world!</h1>
+    <?php require 'partials/_nav.php'?>
+    <div id="home">
+        <div class="home1">
+            <h1>Welcome to, RJ MOVIES</h1>
+            <h2><span id="w"><span>Watch</span> </span> <br> Experience the movie </h2>
+            <button>Book Now</button>
+        </div>
+        <div class="home2">
+            <img src="Movie.svg" alt="watching movie" height="485px" width="500px">
+        </div>
+    </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <div id="about_us">
+        <div class="au_content">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <h1>
+                About RJ MOVIES
+            </h1>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+            <p>
+                <b>RJ MOVIES</b> is a well established cinema hall of Nepal
+                which is located in Thamel,Kathmandu. It was commenced on
+                2075 B.S. with the purpose of providing our customers the
+                best movie watching experience. We are proud to say that
+                we are the first cinema hall of Nepal to introduce the VR
+                technology which not only has the 360&deg; view but also gives
+                our customer the option to interact with the seats on alignment
+                with the movie scenes. We also have a well managed cafeteria in
+                which the foods and drinks are healthy as well as affordable.
+
+                
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <h1 style=" display: inline-block; margin-left:600px;">RJ MOVIES</h1>
+        <div id="foot">
+            <div id="foot1">
+                <h3>For Booking</h3>
+                <br>
+                <ul>
+                    <li>9869064636</li>
+                    <li>9803674803</li>
+                </ul>
+            </div>
+            <div id="foot2">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#au">About Us</a></li>
+                    <li><a href="#cu">Contact us</a></li>
+                </ul>
+            </div>
+            <div id="foot3">
+                <h3>Follow us</h3>
+                <br>
+                <ul>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-youtube"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>   
+                </ul>
+
+            </div>
+        </div>
+        <div id="last">
+            <p>&copy; RJ MOVIES 2017-2022 &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved</p>
+        </div>
+      </footer>
+
   </body>
 </html>

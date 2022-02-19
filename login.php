@@ -5,21 +5,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <title>Hello, world!</title>
   </head>
   <body>
-      <?php require 'partials/_nav.php'?>
+      <?php require 'partials/_nav.php';
+      include 'connection.php';
+        $login = false;
+        if($_SERVER['REQUEST_METHOD'] == "POST")
+        {
+          if(isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password']))
+          {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            $sql = "SELECT * FROM user where username='$username' AND password = '$password'";
+            $result = mysqli_query($conn,$sql);
+            $num = mysqli_num_rows($result);
+
+            if($num == 1 )
+            {
+              $login = true;
+              session_start();
+              $_SESSION['loggedin'] = true;
+              $_SESSION['usernmae'] = $username;
+
+              header("location: ticket.php"); 
+            }
+          }
+          else
+          {
+            $showError = true;
+          }
+        }
+
+
+        if(isset($showAlert)&&$showAlert)
+        {
+
+          echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> Your account is created and you can now login!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
+        }
+
+        if(isset($showError)&&$showError)
+        {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Oops!</strong> Enter the credentials properly!
+                <button type="button" class="clost" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+          </div>';
+        }
+      ?>
       <div class="container">
         <h1 class="text-center">Log In</h1>
 
 
-        <form >
+        <form method = 'post' action ='<?php echo $_SERVER['PHP_SELF']; ?>'>
             <div class="mb-3">
-                <label for="username" class="form-label">Email address</label>
-                <input type="email" id="username" name="username" class="form-control" aria-describedby="emailHelp">
+                <label for="username" class="form-label">Username</label>
+                <input type="username" id="username" name="username" class="form-control" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label" >Password</label>

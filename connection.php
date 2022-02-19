@@ -9,6 +9,6 @@
         die("Database Connection failed: ".mysqli_connect_error());
     }
     else{
-        echo "<h3>Connected with the database successfully</h3>";
+        
     }
 ?>
