@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <title>Welcome</title>
+    <title>RJ MOVIES</title>
   </head>
   <body>
     <?php require 'partials/_nav.php'?>
@@ -79,6 +79,6 @@
             <p>&copy; RJ MOVIES 2017-2022 &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved</p>
         </div>
       </footer>
-
+      <script src="https://kit.fontawesome.com/902b67489c.js" crossorigin="anonymous"></script>
   </body>
 </html>

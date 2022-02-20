@@ -40,8 +40,116 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
     <title>Sign Up</title>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+        
+        .alert-success{
+            background-color: #28a745;
+            border-color: #28a745;
+            font-size: 20px;
+        }
+        .alert-danger{
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .alert-success .btn-close{
+            color: #fff;
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .alert-danger .btn-close{
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-close{
+            padding: 0.25rem 0.5rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            border-radius: 0.25rem;
+        }
+
+        .btn-close:hover{
+            color: #fff;
+            background-color: #d73925;
+            border-color: #d73925;
+        }
+
+        .container{
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            background-color: rgb(253, 80 , 115);
+            border-radius:20px;
+        }
+
+        .text-center{
+            margin-top: 0.5em;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;  
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-label{
+            margin-top: 10em;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-control{
+            padding: 5px;
+            width: 90%;
+            display: inline-block;
+            background: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .form-control:focus{
+            background-color: #ddd;
+            outline: 1px solid #5e00c9;
+            border: none;
+        }
+        
+        .form-control:focus::-webkit-input-placeholder {
+            color: #888;
+        }
+
+        .mb-3{
+            margin-bottom: 0.4em;
+            margin-left: 1em;
+        }
+
+        #sub-btn{
+            background: #5e00c9;
+            border-color: #28a745;
+            height: 2em;
+            color: #fff;
+            width: 89%;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 10px;
+            margin-top: 0.1em;
+            margin-left: 0.8em;
+            margin-bottom: 0.4em;
+        }
+
+        #sub-btn:hover{
+            background-color: #313552; 
+            cursor: pointer;
+        }
+        
+    </style>
   </head>
   <body>
       <?php
@@ -65,9 +173,11 @@
           </div>';
         }
       ?>
-      <div class="container">
-        <h1 class="text-center">Sign Up</h1>
 
+
+      <div class="container">
+
+        <h1 class="text-center">Sign Up</h1>
 
         <form action='signup.php' method='POST'>
             <div class="mb-3">
@@ -95,26 +205,21 @@
                 <input type="text" id="username" name="username" class="form-control" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
                 <label for="password" class="form-label" >Password</label>
                 <input type="password" class="form-control" id="password" id="password" name="password">
             </div>
             <div class="mb-3">
                 <label for="cpassword" class="form-label" >Confirm Password</label>
                 <input type="password" class="form-control" id="cpassword" id="cpassword" name="cpassword">
-                <small id="emailHelp" class="form-text text-muted" >Make sure to type the same password</small> 
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="sub-btn" class="btn btn-primary">Submit</button>
         </form>
       </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
