@@ -1,5 +1,8 @@
 <?php
-  session_start();
+  if(!isset($_SESSION))
+  {
+    session_start();
+  }
   $loggedin = false;
   if(isset($_SESSION['loggedin'])&& $_SESSION['loggedin']==true)
   {
@@ -21,7 +24,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php">About Us</a>
+          <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php#about_us">About Us</a>
         </li>
         <?php
           if($loggedin)

@@ -94,11 +94,6 @@
     // </div> -->
     <?php require 'partials/_nav.php'; ?>
     <div id="seat-container">
-        <h4>Screen Here</h4>
-        <div id="zero-box">
-
-        </div>
-
         <div class="box" id="zero-box">
             <?php
                 forEach($dispaly_data as $index => $indi)
@@ -110,59 +105,64 @@
                         // echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
                         // .$indi['seat_id']
                         // ."</div>";
-
+                        
                         echo "<div class='seats' id='seatlabel'>".letterProvider(floor($index/15))."</div>";
                     }
                 }
-            ?>
+                ?>
         </div>
+        
+        <div id="main-boxes">
+            <div>
+                <h4 id="screen">Screen Here</h4>
+                <div class="box" id="first-box">
+                    <?php
+                        forEach($dispaly_data as $index => $indi)
+                        {
+                            
+                            $bar = floor(($index%15)/5);
+                            if($bar==0)
+                            {
+                                echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
+                                .$indi['seat_id']
+                                ."</div>";
+                            }
+                        }
+                    ?>
+                </div>
 
-        <div class="box" id="second-box">
-            <?php
-                forEach($dispaly_data as $index => $indi)
-                {
+                <div class="box" id="second-box">
+                    <?php
+                        forEach($dispaly_data as $index => $indi)
+                        {
+                            
+                            $bar = floor(($index%15)/5);
+                            if($bar==1)
+                            {
+                                echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
+                                .$indi['seat_id']
+                                ."</div>";
+                            }
+                        }
+                    ?>
+                </div>
+
+                <div class="box" id="third-box">
+                    <?php
+                        forEach($dispaly_data as $index => $indi)
+                        {
+                            $bar = floor(($index%15)/5);
+                            if($bar==2)
+                            {
+                                echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
+                                .$indi['seat_id']
+                                ."</div>";
+                            }
+                        }
+                    ?>
                     
-                    $bar = floor(($index%15)/5);
-                    if($bar==0)
-                    {
-                        echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
-                        .$indi['seat_id']
-                        ."</div>";
-                    }
-                }
-            ?>
-        </div>
-
-        <div class="box" id="second-box">
-            <?php
-                forEach($dispaly_data as $index => $indi)
-                {
-                    
-                    $bar = floor(($index%15)/5);
-                    if($bar==1)
-                    {
-                        echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
-                        .$indi['seat_id']
-                        ."</div>";
-                    }
-                }
-            ?>
-        </div>
-
-        <div class="box" id="third-box">
-            <?php
-                forEach($dispaly_data as $index => $indi)
-                {
-                    $bar = floor(($index%15)/5);
-                    if($bar==2)
-                    {
-                        echo "<div class='".$statusMap[$indi['status']]."' data-status='".$indi['status']."'>"
-                        .$indi['seat_id']
-                        ."</div>";
-                    }
-                }
-            ?>
-            
+                </div>
+            </div>
         </div>
        
     </div>

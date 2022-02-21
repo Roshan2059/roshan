@@ -79,6 +79,7 @@
             <p>&copy; RJ MOVIES 2017-2022 &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved</p>
         </div>
       </footer>
+      <script src="stylescript.js"></script>
       <script src="https://kit.fontawesome.com/902b67489c.js" crossorigin="anonymous"></script>
   </body>
 </html>
