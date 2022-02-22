@@ -60,7 +60,6 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#au">About Us</a></li>
-                    <li><a href="#cu">Contact us</a></li>
                 </ul>
             </div>
             <div id="foot3">

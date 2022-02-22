@@ -44,35 +44,37 @@ body {
     font-family: 'Montserrat', sans-serif;
 } */
 
+
+#outer1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
 #seat-container {
     width: 59%;
     text-align: center;
+    display: flex;
 }
 
 #screen{
     font-family: constantia;
     border-bottom: 3px solid var(--primaryA);
-    width: 70%;
+    width: 80%;
     height: 2px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-right: auto;
     margin-left:auto;
-}
-
-#main-boxes{
-    display: inline-flex;
 }
 
 .seats {
     border: 1px solid var(--primaryA);
     border-radius: 20px;
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
     margin: 8px;
     padding: 5px;
     display: flex;
-    font-size: x-small;
+    font-size: 13px;
     justify-content: center;
     align-items: center;
     color: transparent;
@@ -117,17 +119,51 @@ body {
     display: inline-flex;
     width: 17vw;
     flex-wrap: wrap;
-    margin:0 5px;
+    margin:40px 5px;
 }
 
 #zero-box {
     display: inline-flex;
-    width: 3vw;
+    width: 2vw;
     flex-wrap: wrap;
-    transform: translate(0,45px);
+    transform: translate(0,20px);
+    font-size: 20px;
 }
 
+#buy-ticket{
+    height: 70vh;
+    width: 39%;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
+.bnrb{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(243, 24, 24);
+    border: none;
+}
+
+#bill{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    height: 50vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgb(253, 80 , 115);
+    border-radius: 20px;
+}
+
+#bill table{
+    width: 70%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* Styles for navigation */
@@ -317,7 +353,7 @@ nav.navbar {
 footer {
     float: left;
     color: var(--primary);
-    height: 280px;
+    height: 180px;
 }
 
 footer h1 {
