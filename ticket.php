@@ -110,6 +110,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <div class="box" id="first-box">
                         <?php
                         foreach ($dispaly_data as $index => $indi) {
+
+
+                             // To Run only once to load seat data to the database
+                            // include 'connection.php';
+                            // $listsql = "INSERT INTO `seat` (`seat_id`) VALUES ('{$indi['seat_id']}')";
+                            // $listresult = mysqli_query($conn,$listsql);
+
                             $bar = floor(($index % 15) / 5);
                             if ($bar == 0) {
                                 echo "<div class='" . $statusMap[$indi['status']] . "' data-status='" . $indi['status'] . "'>"

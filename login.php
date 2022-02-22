@@ -33,7 +33,7 @@
               $_SESSION['loggedin'] = true;
               $_SESSION['usernmae'] = $username;
 
-              header("location: ticket.php"); 
+              header("location: ticket.php");
             }
           }
           else
