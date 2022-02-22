@@ -6,7 +6,9 @@
     padding: 0;
     --primary: #5e00c9;
     --primaryA: #313552;
+    --primaryB: #5e00c9;
     --secondary: rgb(253, 22, 115);
+    --secondaryB: rgba(253, 80 , 115);
     --background: #EEE6CE;
     --textone: black;
     --texttwo: white;
@@ -128,7 +130,16 @@ body {
     flex-wrap: wrap;
     transform: translate(0,20px);
     font-size: 20px;
+    margin: 45px 0px;
+    height: fit-content;
 }
+
+/* #zero-box>.seats{
+    padding: 2px;
+    height:18px;
+    margin: 0px;
+
+} */
 
 #buy-ticket{
     height: 70vh;
@@ -137,34 +148,84 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#purchase{
+    margin-top: 1em;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .bnrb{
-    font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(243, 24, 24);
-    border: none;
+    font-size: 24px;
+    font-weight: bolder;
+    color:var(--texttwo);
+    background-color: var(--secondaryB);
+    border: 2px solid transparent;
+
+/*     
+    background-color: transparent;
+    color: var(--secondaryB);
+    border: 2px solid var(--secondaryB); */
+
+
+    padding: 15px 55px;
+    /* margin:0px 35px; */
+    border-radius: 15px;
+}
+
+.bnrb:hover{
+    background-color: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+
+    /* color:var(--texttwo);
+    background-color: var(--secondaryB);
+    border: 2px solid transparent; */
 }
 
 #bill{
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    height: 50vh;
-    width: 70%;
+    height: 70vh;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    color: white;
-    background-color: rgb(253, 80 , 115);
+    color: var(--texttwo);
+    background-color: var(--secondaryB);
+    backdrop-filter: grayscale(1) contrast(3) blur(1px);
     border-radius: 20px;
 }
 
-#bill table{
-    width: 70%;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+#bill h2{
+    margin:20px;
 }
 
+#bill table{
+    text-align: left;
+    width: 90%;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 8px;
+    border-collapse: collapse;
+}
+
+#bill table td{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#bill table,td,th,td{
+    border:2px solid var(--texttwo);
+}
+
+#bill th,td{
+    padding: 16px;
+}
 
 /* Styles for navigation */
 
@@ -228,7 +289,7 @@ nav.navbar {
 
 .btn:hover {
     background: var(--texttwo);
-    color: #5e00c9;
+    color: var(--primaryB);
 }
 
 

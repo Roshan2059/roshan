@@ -148,27 +148,29 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         </div>
         <div id="buy-ticket">
             <div id="bill">
+                <h2>Your Bill</h2>
                 <table>
-                    <caption>Your Bill</caption>
                     <tr>
-                        <th>Selected Seats</th>
-                        <th>Price</th>
+                        <th >Selected Seats</th>
+                        <th width="80px">Quantity</th>
+                        <th>Price(per seat)</th>
                     </tr>
-                    <?php
 
-                    ?>
                     <tr>
-                        <th>Total</th>
-                        <th>Rs. 0</th>
+                        <td style="text-align:left;" id="seats_id_info">...</td>
+                        <td>X <span id="seats_quantity">0</span></td>
+                        <td>Rs.100</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Total</th>
+                        <th id="total_amount">Rs. 0</th>
                     </tr>
                 </table>
             </div>
 
-            <div id="buy-button" class="bnrb">
-            <button>Buy Ticket</button>
-            </div>
-            <div id="rsrv-button" class="bnrb">
-                <button>Reserve Ticket</button>
+            <div id="purchase">
+                <button id="buy-button" class="bnrb">Buy Ticket</button>
+                <button id="rsrv-button" class="bnrb">Reserve Ticket</button>
             </div>
     
         </div>
