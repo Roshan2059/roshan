@@ -70,7 +70,86 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         }
         return $seats;
     }
-    $dispaly_data = create_data(120);
+
+
+    function statusCalculator($seat,$reserved=[],$booked=[])
+        {
+            $state = ["available", "reserved", "booked"];
+            if(in_array($seat,$reserved))
+            {
+                return $state[1];
+            }
+            if(in_array($seat,$booked))
+            {
+                return $state[2];
+            }
+            return $state[0];
+        }
+
+
+    function clean_data($seats, $reserved=[], $booked=[])
+    {
+
+
+        $out = array();
+        foreach($seats as $seat)
+        {
+            array_push($out,[
+                "seat_id" => $seat,
+                "status" => statusCalculator($seat,$reserved,$booked)
+            ]);
+        }
+        return $out;
+    }
+
+
+    //Fetching seats data from database
+    include 'connection.php';
+    $sqlSeats = "SELECT * FROM seat";
+    $seatIn = mysqli_query($conn,$sqlSeats);
+
+
+    $sqlBooking = "SELECT * FROM booking WHERE show_id = '1' AND user_id = '9'";
+    $bookingIn = mysqli_query($conn,$sqlBooking);
+
+    $allSeats = array();
+    while($row = mysqli_fetch_assoc($seatIn))
+    {
+        // debug($row);
+        // debug(clean_data($row));
+        // debug($row);
+
+        array_push($allSeats,$row['seat_id']);
+    }
+
+    $booking = array();
+    $bookedSeats = array();
+    $reservedSeats = array();
+    while($bookingRow = mysqli_fetch_assoc($bookingIn))
+    {
+        // debug($bookingRow);
+        $bookingId = $bookingRow['booking_id'];
+
+        $seatBookSQL = "SELECT * FROM seatbook WHERE booking_id = '$bookingId'";
+        $seatBookIn = mysqli_query($conn,$seatBookSQL);
+
+        while($seatBookRow = mysqli_fetch_assoc($seatBookIn))
+        {
+            $theSeat = $seatBookRow['seat_id'];
+            if ($bookingRow['sold']==1)
+            {
+                array_push($bookedSeats,$theSeat);
+            }
+            else
+            {
+                array_push($reservedSeats, $theSeat);
+            }
+        }
+    }
+
+    // debug(clean_data($allSeats,$bookedSeats,$reservedSeats));
+
+    $dispaly_data = clean_data($allSeats,$reservedSeats,$bookedSeats);
     //  echo letterProvider(-5);
     // create_data(10);
 

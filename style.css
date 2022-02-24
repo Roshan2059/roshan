@@ -8,7 +8,9 @@
     --primaryA: #313552;
     --primaryB: #5e00c9;
     --secondary: rgb(253, 22, 115);
-    --secondaryB: rgba(253, 80 , 115);
+    --secondaryB: rgb(248, 96, 126);
+    /* --secondaryB: #f4c2c2; */
+
     --background: #EEE6CE;
     --textone: black;
     --texttwo: white;

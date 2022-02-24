@@ -119,4 +119,12 @@ reserveButton.addEventListener('click',()=>
 buyButton.addEventListener('click',()=>
 {
     console.log(selectedSeats);
+
+    fetch('book.php',{
+        method: 'POST',
+        body: selectedSeats
+    })
+    .then((res)=>res.json())
+    .then(res=>console.log(res))
+    .catch(()=>console.log("some error"));
 });
