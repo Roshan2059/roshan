@@ -77,6 +77,7 @@
             </div>
             <button type="submit" id="sub-btn" class="btn btn-primary">Submit</button>
         </form>
+       <h4 class="dha">Don't have an account? <a href="signup.php">Register</a></h4>
       </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

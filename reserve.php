@@ -13,14 +13,11 @@
         
         if($find_query)
         {
-            $booking = mysqli_fetch_assoc($find_query); 
-            $modifyBookingSQL = "UPDATE booking SET sold='0' WHERE booking_id = '".$booking['booking_id']."'";
-            $modifyResult = mysqli_query($conn,$modifyBookingSQL);
-
-            $delsql = "DELETE from seatbook where booking_id = '$idout'";
+            $delsql = "DELETE from seatbook where booking_id = '$idout'";   
             $delresult = mysqli_query($conn,$delsql);
             
         }
+            
         else
         {
             $sql = "INSERT INTO `booking` (`show_id`, `user_id`, `sold`) VALUES ('1', '9', '0');";
