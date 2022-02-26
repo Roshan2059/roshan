@@ -113,7 +113,7 @@ reserveButton.addEventListener('click',()=>
     })
     .then((res)=>res.json())
     .then(res=>console.log(res))
-    .catch(()=>console.log("some error"));
+    .catch((e)=>console.log(e));
 });
 
 buyButton.addEventListener('click',()=>
@@ -126,5 +126,5 @@ buyButton.addEventListener('click',()=>
     })
     .then((res)=>res.json())
     .then(res=>console.log(res))
-    .catch(()=>console.log("some error"));
+    .catch((e)=>console.log(e));
 });

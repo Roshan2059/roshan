@@ -25,6 +25,7 @@
             $sql = "SELECT * FROM user where username='$username' AND password = '$password'";
             $result = mysqli_query($conn,$sql);
             $num = mysqli_num_rows($result);
+            $userinfo = mysqli_fetch_assoc($result);
 
             if($num == 1 )
             {
@@ -32,6 +33,8 @@
               session_start();
               $_SESSION['loggedin'] = true;
               $_SESSION['usernmae'] = $username;
+              $_SESSION['userid'] = $userinfo['user_id'];
+              echo $userinfo['user_id'];
 
               header("location: ticket.php");
             }
@@ -77,7 +80,6 @@
             </div>
             <button type="submit" id="sub-btn" class="btn btn-primary">Submit</button>
         </form>
-       <h4 class="dha">Don't have an account? <a href="signup.php">Register</a></h4>
       </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

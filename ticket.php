@@ -4,6 +4,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     header("location: login.php");
     exit;
 }
+// echo $_SESSION['userid'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,9 +73,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     }
 
 
-    function statusCalculator($seat,$reserved=[],$booked=[])
+    function statusCalculator($seat,$reserved=[],$booked=[],$reservedMine=[], $bookedMine=[])
         {
-            $state = ["available", "reserved", "booked"];
+            $state = ["available", "reserved", "booked","reservedmine","bookedmine"];
             if(in_array($seat,$reserved))
             {
                 return $state[1];
@@ -83,11 +84,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             {
                 return $state[2];
             }
+            if(in_array($seat,$reservedMine))
+            {
+                return $state[3];
+            }
+            if(in_array($seat,$bookedMine))
+            {
+                return $state[4];
+            }
+
             return $state[0];
         }
 
 
-    function clean_data($seats, $reserved=[], $booked=[])
+    function clean_data($seats, $reserved=[], $booked=[],$reservedMine=[], $bookedMine=[])
     {
 
 
@@ -96,7 +106,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         {
             array_push($out,[
                 "seat_id" => $seat,
-                "status" => statusCalculator($seat,$reserved,$booked)
+                "status" => statusCalculator($seat,$reserved,$booked,$reservedMine,$bookedMine)
             ]);
         }
         return $out;
@@ -105,11 +115,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
     //Fetching seats data from database
     include 'connection.php';
-    $sqlSeats = "SELECT * FROM seat";
+    $sqlSeats = "SELECT *,SUBSTRING(seat_id, 1,1) AS txt,SUBSTRING(seat_id, 2) AS num FROM `seat` WHERE 1 ORDER BY `txt` ASC, CAST(`num` as int) ASC;";
     $seatIn = mysqli_query($conn,$sqlSeats);
 
 
-    $sqlBooking = "SELECT * FROM booking WHERE show_id = '1' AND user_id = '9'";
+    $sqlBooking = "SELECT * FROM booking WHERE show_id = '1'";
     $bookingIn = mysqli_query($conn,$sqlBooking);
 
     $allSeats = array();
@@ -125,9 +135,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     $booking = array();
     $bookedSeats = array();
     $reservedSeats = array();
+    $bookedSeatsMine = array();
+    $reservedSeatsMine = array();
+
     while($bookingRow = mysqli_fetch_assoc($bookingIn))
     {
         // debug($bookingRow);
+        // echo "found booking\n";
         $bookingId = $bookingRow['booking_id'];
 
         $seatBookSQL = "SELECT * FROM seatbook WHERE booking_id = '$bookingId'";
@@ -135,21 +149,35 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
         while($seatBookRow = mysqli_fetch_assoc($seatBookIn))
         {
+            // echo "found row\n";
             $theSeat = $seatBookRow['seat_id'];
             if ($bookingRow['sold']==1)
             {
-                array_push($bookedSeats,$theSeat);
+                if($bookingRow['user_id'] == $_SESSION['userid'])
+                {
+                    array_push($bookedSeatsMine,$theSeat);
+                }
+                else{
+                    array_push($bookedSeats,$theSeat);
+                }
             }
             else
             {
-                array_push($reservedSeats, $theSeat);
+                if($bookingRow['user_id'] == $_SESSION['userid'])
+                {
+                    array_push($reservedSeatsMine, $theSeat);
+                }
+                else
+                {
+                    array_push($reservedSeats, $theSeat);
+                }
             }
         }
     }
 
     // debug(clean_data($allSeats,$bookedSeats,$reservedSeats));
 
-    $dispaly_data = clean_data($allSeats,$reservedSeats,$bookedSeats);
+    $dispaly_data = clean_data($allSeats,$reservedSeats,$bookedSeats,$reservedSeatsMine,$bookedSeatsMine);
     //  echo letterProvider(-5);
     // create_data(10);
 
@@ -159,6 +187,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         "available" => "seats available",
         "reserved" => "seats reserved",
         "booked" => "seats booked",
+        "reservedmine" => "seats reservedmine",
+        "bookedmine" => "seats bookedmine",
         "selected" => "seats booked"
     ];
 
@@ -196,8 +226,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                             // $listsql = "INSERT INTO `seat` (`seat_id`) VALUES ('{$indi['seat_id']}')";
                             // $listresult = mysqli_query($conn,$listsql);
 
-                            $bar = floor(($index % 15) / 5);
-                            if ($bar == 0) {
+                            $hereid = substr($indi['seat_id'],1);
+                            // echo $hereid;
+
+
+                            $bar = ($hereid % 16) / 5;
+                            // echo $bar;
+                            if ($bar <= 1) {
                                 echo "<div class='" . $statusMap[$indi['status']] . "' data-status='" . $indi['status'] . "'>"
                                     . $indi['seat_id']
                                     . "</div>";
@@ -208,8 +243,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <div class="box" id="second-box">
                         <?php
                         foreach ($dispaly_data as $index => $indi) {
-                            $bar = floor(($index % 15) / 5);
-                            if ($bar == 1) {
+                            $hereid = substr($indi['seat_id'],1);
+                            $bar = ($hereid % 16) / 5;
+                            if ($bar > 1 && $bar <=2) {
                                 echo "<div class='" . $statusMap[$indi['status']] . "' data-status='" . $indi['status'] . "'>"
                                     . $indi['seat_id']
                                     . "</div>";
@@ -220,8 +256,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <div class="box" id="third-box">
                         <?php
                         foreach ($dispaly_data as $index => $indi) {
-                            $bar = floor(($index % 15) / 5);
-                            if ($bar == 2) {
+                            $hereid = substr($indi['seat_id'],1);
+                            $bar = ($hereid % 16) / 5;
+                            if ($bar > 2 && $bar<=3) {
                                 echo "<div class='" . $statusMap[$indi['status']] . "' data-status='" . $indi['status'] . "'>"
                                     . $indi['seat_id']
                                     . "</div>";

@@ -9,6 +9,8 @@
     --primaryB: #5e00c9;
     --secondary: rgb(253, 22, 115);
     --secondaryB: rgb(248, 96, 126);
+    --positive:green;
+    --positiveB:rgb(98, 189, 98);
     /* --secondaryB: #f4c2c2; */
 
     --background: #EEE6CE;
@@ -101,6 +103,14 @@ body {
 
 .booked {
     background: rgb(243, 24, 24);
+}
+
+.reservedmine{
+    background: var(--positiveB);
+}
+
+.bookedmine{
+    background: var(--positive);
 }
 
 .selected {
