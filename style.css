@@ -146,13 +146,6 @@ body {
     height: fit-content;
 }
 
-/* #zero-box>.seats{
-    padding: 2px;
-    height:18px;
-    margin: 0px;
-
-} */
-
 #buy-ticket{
     height: 70vh;
     width: 39%;
@@ -177,15 +170,7 @@ body {
     color:var(--texttwo);
     background-color: var(--secondaryB);
     border: 2px solid transparent;
-
-/*     
-    background-color: transparent;
-    color: var(--secondaryB);
-    border: 2px solid var(--secondaryB); */
-
-
     padding: 15px 55px;
-    /* margin:0px 35px; */
     border-radius: 15px;
 }
 
@@ -193,10 +178,6 @@ body {
     background-color: transparent;
     color: var(--secondary);
     border: 2px solid var(--secondary);
-
-    /* color:var(--texttwo);
-    background-color: var(--secondaryB);
-    border: 2px solid transparent; */
 }
 
 #bill{
@@ -541,7 +522,7 @@ footer div #foot3 {
 .container{
     margin: 5em auto;
     width: 20%;
-    background-color: rgb(253, 80 , 115);
+    background-color: var(--secondary);
     border-radius:20px;
     justify-content: center;
     align-items: center;
