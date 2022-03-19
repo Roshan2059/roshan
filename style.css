@@ -72,6 +72,13 @@ body {
     margin-left:auto;
 }
 
+#main .hint {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primaryA);
+    display: inline-flex;
+}
+
 .seats {
     border: 1px solid var(--primaryA);
     border-radius: 20px;
