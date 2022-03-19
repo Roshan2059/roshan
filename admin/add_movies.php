@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <style>
-         * {
-        margin: 0;
-        padding: 0;
-    }
-    body{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-        
-        form{
+        form {
             width: 30vw;
             height: 90vh;
             padding: 20px;
@@ -25,26 +25,21 @@
             margin-left: auto;
             position: relative;
         }
-        
-        textarea{
+        textarea {
             font-size: 20px;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
-        
-        label{
+        label {
             font-size: 20px;
         }
-
-        input{
+        input {
             padding: 0.5em;
             font-size: 20px;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
-        a{
+        a {
             text-decoration: none;
             padding: 8px;
             background-color: blue;
@@ -53,23 +48,24 @@
             position: absolute;
             left: 15vw;
         }
-
-        a:hover{
+        a:hover {
             color: white;
             background-color: springgreen;
         }
     </style>
 </head>
+
 <body>
-        <form action="">
-            <h1>Add Show</h1>
-            <label for="">Movie name:</label><br>
-            <input type="text" name="" id=""><br>
-            <label for="">Description:</label><br>
-            <textarea name="" id="" cols="40" rows="10"></textarea><br>
-            <label for="">Image:</label><br>
-            <input type="file" name="" id="">
-            <a href="">confirm</a>
-        </form>
+    <form action="">
+        <h1>Add Show</h1>
+        <label for="">Movie name:</label><br>
+        <input type="text" name="" id=""><br>
+        <label for="">Description:</label><br>
+        <textarea name="" id="" cols="40" rows="10"></textarea><br>
+        <label for="">Image:</label><br>
+        <input type="file" name="" id="">
+        <a href="">confirm</a>
+    </form>
 </body>
+
 </html>

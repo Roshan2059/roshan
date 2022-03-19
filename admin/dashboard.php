@@ -24,39 +24,6 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
-    
-    .menu-box {
-        background: linear-gradient(180deg, var(--primary) 0%, var(--primaryA) 100%);
-        height: 100vh;
-        width: 10%;
-        display: block;
-        position: fixed;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    li {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    .fli {
-        margin-top: 100px;
-    }
-
-    li:hover {
-        background-color: white;
-        color: #9471f5;
-    }
-
     .main {
         width: 85vw;
         display: flex;
@@ -93,26 +60,6 @@
 
 </style>
 <body>
-
-    <div class="menu-box">
-        <ul>
-            <a href="dashboard.html">
-                <li class="fli">Dashboard</li>
-            </a>
-            <a href="users.html">
-                <li>Users</li>
-            </a>
-            <a href="booking.html">
-                <li>Bookings</li>
-            </a>
-            <a href="movies.html">
-                <li>Movies</li>
-            </a>
-            <a href="show.html">
-                <li>Shows</li>
-            </a>
-        </ul>
-    </div>
 
     <div class="main">
         <div class="box">

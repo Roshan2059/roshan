@@ -11,52 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 
     <style>
-         * {
-        margin: 0;
-        padding: 0;
-        --primary: #5e00c9;
-        --primaryA: #313552;
-    }
-    
-    body {
+        * {
+            margin: 0;
+            padding: 0;
+            --primary: #5e00c9;
+            --primaryA: #313552;
+        }
+
+        body {
             background-color: whitesmoke;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
-        .menu-box {
-            background: linear-gradient(180deg, var(--primaryA) 35%, var(--primary) 100%);
-            height: 100vh;
-            width: 10%;
-            display: block;
-            float: left;
-            position: fixed;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        li {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            padding: 20px;
-        }
-
-        .fli {
-            margin-top: 100px;
-        }
-
-        li:hover {
-            background-color: white;
-            color: #9471f5;
-        }
-
         table {
             position: absolute;
             top: 3vh;
@@ -64,11 +30,11 @@
             border: none;
             width: 80vw;
             height: auto;
-            border-collapse: separate; 
+            border-collapse: separate;
             border-spacing: 0 0.8em;
         }
 
-        th{
+        th {
             padding: 30px;
             margin: 10px;
         }
@@ -85,30 +51,10 @@
         td {
             padding: 30px;
         }
-
     </style>
 </head>
 
 <body>
-    <div class="menu-box">
-        <ul>
-            <a href="dashboard.html">
-                <li class="fli">Dashboard</li>
-            </a>
-            <a href="users.html">
-                <li>Users</li>
-            </a>
-            <a href="booking.html">
-                <li>Bookings</li>
-            </a>
-            <a href="movies.html">
-                <li>Movies</li>
-            </a>
-            <a href="show.html">
-                <li>Shows</li>
-            </a>
-        </ul>
-    </div>
 
     <div class="main">
         <table>

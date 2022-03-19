@@ -19,19 +19,16 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         h1{
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 5vh;
         }
-
         label{
             margin-top: 5vh;
             font-size: 20px;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
         input{
             padding: 0.5em;
             font-size: 20px;
@@ -39,7 +36,6 @@
             font-weight: bold;
             margin-bottom: 5vh;
         }
-
         a{
             text-decoration: none;
             padding: 8px;
@@ -48,7 +44,6 @@
             border-radius: 5px;
             text-align: center;
         }
-
         a:hover{
             color: white;
             background-color: springgreen;
