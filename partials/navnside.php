@@ -21,7 +21,6 @@
     body{
         background-color: whitesmoke;
     }
-
     .menu-box {
         /* background: linear-gradient(180deg, pink 0%, rgb(255,204,110) 100%); */
         background-color: var(--primaryA);
@@ -37,6 +36,7 @@
         /* background-color: var(--primary); */
         width: 100vw;
         height: 10vh;
+        position: fixed;
     }
 
     .admin_nav h1{
@@ -108,19 +108,19 @@
     </div>
     <div class="menu-box">
         <ul>
-            <a href="dashboard.html">
+            <a href="dashboard.php">
                 <li class="fli">Dashboard</li>
             </a>
-            <a href="users.html">
+            <a href="users.php">
                 <li>Users</li>
             </a>
-            <a href="booking.html">
+            <a href="booking.php">
                 <li>Bookings</li>
             </a>
-            <a href="movies.html">
+            <a href="movies.php">
                 <li>Movies</li>
             </a>
-            <a href="show.html">
+            <a href="shows.php">
                 <li>Shows</li>
             </a>
         </ul>

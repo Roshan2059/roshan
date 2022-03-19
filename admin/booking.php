@@ -53,7 +53,7 @@
 </head>
 
 <body>
-   
+<?php include '../partials/navnside.php'; ?>
     <div class="main">
         <table>
             <tr>

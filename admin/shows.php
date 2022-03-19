@@ -110,6 +110,7 @@
 </head>
 
 <body>
+<?php include '../partials/navnside.php'; ?>
     <a href="add_show.html" class="add">add show</a>
 
     <div class="boxes m1">

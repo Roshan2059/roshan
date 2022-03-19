@@ -87,7 +87,7 @@
 </head>
 
 <body>
-
+<?php include '../partials/navnside.php'; ?>
     <a href="add_movies.html" class="add">Add movie</a>
 
     <div class="boxes">
