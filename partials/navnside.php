@@ -66,8 +66,8 @@
             background-color: var(--primary);
             color: white;
             position: absolute;
-            top: 1.4vh;
-            left: 91vw;
+            top: 1.8vh;
+            left: 90vw;
             font-weight: bolder;
         }
 
@@ -93,7 +93,7 @@
         }
 
         .fli {
-            margin-top: 20px;
+            margin-top: 8vh;
         }
 
         li:hover {
@@ -107,7 +107,7 @@
     <div class="admin_nav">
         <h1>RJ Movies</h1>
         <h2>Admin Panel</h2>
-        <a href="#">LOG OUT</a>
+        <a href="../logout.php">LOG OUT</a>
     </div>
     <div class="menu-box">
         <ul>

@@ -24,6 +24,7 @@
             position: absolute;
             left: 70vw;
             top: 2vh;
+            width: fit-content;
             padding: 10px;
             border-radius: 10px;
             font-size: 25px;
@@ -45,8 +46,8 @@
             flex-wrap: wrap;
             position: absolute;
             top: 10vh;
-            left: 10vw;
-            width: 85vw;
+            left: 15vw;
+            width: 80vw;
             height: 90vh;
         }
 

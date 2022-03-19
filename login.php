@@ -1,14 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <title>Hello, world!</title>
+    <title>login</title>
   </head>
   <body>
       <?php 
@@ -27,16 +23,31 @@
             $num = mysqli_num_rows($result);
             $userinfo = mysqli_fetch_assoc($result);
 
-            if($num == 1 )
+            // if($num == 1 )
+            // {
+            //   $login = true;
+            //   session_start();
+            //   $_SESSION['loggedin'] = true;
+            //   $_SESSION['usernmae'] = $username;
+            //   $_SESSION['userid'] = $userinfo['user_id'];
+            //   echo $userinfo['user_id'];
+
+            //   header("location: ticket.php");
+            // }
+
+            if($userinfo["usertype"] == "user")
             {
               $login = true;
               session_start();
               $_SESSION['loggedin'] = true;
               $_SESSION['usernmae'] = $username;
               $_SESSION['userid'] = $userinfo['user_id'];
-              echo $userinfo['user_id'];
-
               header("location: ticket.php");
+            }
+
+            if($userinfo["usertype"] == "admin")
+            {
+              header("location: admin/dashboard.php");
             }
           }
           else
@@ -44,30 +55,9 @@
             $showError = true;
           }
         }
-
-
-        if(isset($showAlert)&&$showAlert)
-        {
-
-          echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success!</strong> Your account is created and you can now login!
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-        }
-
-        if(isset($showError)&&$showError)
-        {
-            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Oops!</strong> Enter the credentials properly!
-                <button type="button" class="clost" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-          </div>';
-        }
       ?>
       <div class="container">
         <h1 class="text-center">Log In</h1>
-
 
         <form method = 'post' action ='<?php echo $_SERVER['PHP_SELF']; ?>'>
             <div class="mb-3">

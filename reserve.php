@@ -2,12 +2,9 @@
     try
     {
         include 'connection.php';
-
         //Getting data from user
         $contents = file_get_contents('php://input');
         $seat_list = explode(",",$contents);
-
-
         if(!isset($_SESSION))
         {
             session_start();

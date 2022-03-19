@@ -25,12 +25,13 @@
 
     .main {
         width: 85vw;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
-        padding-top: 5vh;
+        /* padding-top: 3vh; */
         position: relative;
         left: 12vw;
-        top: 5vh;
+        top: 10vh;
     }
 
     .box {

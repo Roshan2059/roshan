@@ -49,26 +49,7 @@
   <body>
       <?php
       require 'partials/_nav.php';
-        if(isset($showAlert)&&$showAlert)
-        {
-
-          echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success!</strong> Your account is created and you can now login!
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-        }
-
-        if(isset($showError)&&$showError)
-        {
-            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Oops!</strong> Your account is not created!
-                <button type="button" class="clost" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-          </div>';
-        }
       ?>
-
 
       <div class="container">
 
