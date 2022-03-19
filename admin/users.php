@@ -23,6 +23,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
+
         table {
             position: absolute;
             top: 3vh;
@@ -55,7 +56,7 @@
 </head>
 
 <body>
-<?php include '../partials/navnside.php'; ?>
+    <?php include '../partials/navnside.php'; ?>
     <div class="main">
         <table>
             <tr>

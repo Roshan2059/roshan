@@ -56,7 +56,7 @@
 </head>
 
 <body>
-<?php include '../partials/navnside.php'; ?>
+<!-- <?php include '../partials/navnside.php'; ?> -->
     <form action="">
         <h1>Add Show</h1>
         <label for="">Movie name:</label><br>

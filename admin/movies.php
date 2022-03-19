@@ -12,8 +12,6 @@
         * {
             margin: 0;
             padding: 0;
-            --primary: #5e00c9;
-            --primaryA: #313552;
         }
 
         body {
@@ -23,8 +21,8 @@
         }
 
         .add {
-            position: relative;
-            left: 85vw;
+            position: absolute;
+            left: 70vw;
             top: 2vh;
             padding: 10px;
             border-radius: 10px;
@@ -45,20 +43,19 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            position: relative;
+            position: absolute;
             top: 10vh;
-            left: 15vw;
+            left: 10vw;
             width: 85vw;
-            height: auto;
-            min-height: 90vh;
+            height: 90vh;
         }
 
         .box {
             position: relative;
-            top: 0vh;
+            top: 5vh;
             width: 15vw;
             height: 40vh;
-            margin: 10vh 2vw 2vh 2vw;
+            margin: 9vh 2vw 2vh 2vw;
             background-image: url(../images/ae.jpg);
             background-size: 100% 100%;
         }
@@ -73,7 +70,7 @@
             background-color: #9471f5;
             color: white;
             border-radius: 10px;
-            margin: 5px 14px;
+            margin: 0px 14px;
         }
 
         .box .modify {
@@ -87,10 +84,10 @@
 </head>
 
 <body>
-<?php include '../partials/navnside.php'; ?>
-    <a href="add_movies.html" class="add">Add movie</a>
+    <?php include '../partials/navnside.php'; ?>
 
     <div class="boxes">
+        <span><a href="add_movies.php" class="add">Add movie</a></span>
         <div class="box m1">
             <a href="" class="modify">modify</a>
             <a href="" class="delete">delete</a>

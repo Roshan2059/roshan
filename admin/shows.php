@@ -22,41 +22,10 @@
             font-weight: bold;
         }
 
-        .menu-box {
-            background: linear-gradient(180deg, var(--primaryA) 35%, var(--primary) 100%);
-            height: 100vh;
-            width: 10%;
-            display: inline-block;
-            position: fixed;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        ul a {
-            text-decoration: none;
-            color: white;
-        }
-
-        li {
-            font-size: 20px;
-            padding: 20px;
-        }
-
-        .fli {
-            margin-top: 100px;
-        }
-
-        li:hover {
-            background-color: white;
-            color: #9471f5;
-        }
-
         .add {
             position: absolute;
-            top: 2vh;
-            left: 85vw;
+            top: 5vh;
+            left: 70vw;
             width: fit-content;
             padding: 10px;
             border-radius: 10px;
@@ -82,18 +51,16 @@
             width: 85vw;
         }
 
-
         .box {
             position: relative;
             width: 15vw;
             height: 40vh;
             left: 5vw;
-            top: 5vh;
+            top: 10vh;
             margin: 2vw;
             box-sizing: border-box;
             background-image: url(../images/ae.jpg);
             background-size: 100% 100%;
-            box-shadow: 5px 5px 10px solid gray;
         }
 
         .datetime {
@@ -110,10 +77,9 @@
 </head>
 
 <body>
-<?php include '../partials/navnside.php'; ?>
-    <a href="add_show.html" class="add">add show</a>
-
-    <div class="boxes m1">
+    <?php include '../partials/navnside.php'; ?>
+    <div class="boxes">
+        <span><a href="add_show.php" class="add">add show</a></span>
         <div class="box">
             <div class="datetime">
                 Date : 03/16/2022<br>

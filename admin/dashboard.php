@@ -10,20 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 <style>
-
-   
     * {
         margin: 0;
         padding: 0;
         --primary: #5e00c9;
         --primaryA: #313552;
     }
-    
+
     body {
         background-color: whitesmoke;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
+
     .main {
         width: 85vw;
         display: flex;
@@ -31,6 +30,7 @@
         padding-top: 5vh;
         position: relative;
         left: 12vw;
+        top: 5vh;
     }
 
     .box {
@@ -57,15 +57,15 @@
         margin-right: auto;
         font-weight: 1000;
     }
-
 </style>
+
 <body>
     <?php include '../partials/navnside.php'; ?>
 
     <div class="main">
         <div class="box">
             <h1>Now showing movies:</h1>
-            <h1>Avengers</h1>    
+            <h1>Avengers</h1>
         </div>
 
         <div class="box">
