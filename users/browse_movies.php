@@ -28,21 +28,19 @@
       grid-auto-columns: minmax(50px,auto);
     }
     .boxes{
-      background: url(kgf_poster.jpg);      height: 20vw;
+      background: url(kgf_poster.jpg);
+      height: 50vh;
+      width: 20vw;
     }
   </style>
 </head>
 <body>
   <div class="topbox">Now showing</div>
   <div class="container">
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
-    <a href="codeWithroshan.html" target="_blank"><div class="boxes"></div></a>
+    <a href="choose_time.php"><div class="boxes"></div></a>
+    <a href="choose_time.php"><div class="boxes"></div></a>
+    <a href="choose_time.php"><div class="boxes"></div></a>
+    <a href="choose_time.php"><div class="boxes"></div></a>
   </div>
 </body>
 </html>
