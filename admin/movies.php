@@ -85,58 +85,36 @@
 </head>
 
 <body>
-    <?php include '../partials/navnside.php'; ?>
+    <?php include '../partials/navnside.php';
+    include '../connection.php' ?>
 
     <div class="boxes">
         <span><a href="add_movies.php" class="add">Add movie</a></span>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
-        <div class="box m1">
-            <a href="" class="modify">modify</a>
-            <a href="" class="delete">delete</a>
-        </div>
+
+        <!-- <div class="box m1">
+            <a href="#" class="modify">modify</a>SSS
+            <a href="#" class="delete">delete</a>
+        </div> -->
+
+
+        <?php
+        $displayq = "select * from movie";
+        $displayexe = mysqli_query($conn, $displayq);
+
+        if ($displayexe) {
+
+            echo("<div class='box m1'>");
+            echo("<span>Movie 1</span>" . "<br>");
+            echo("<a href='' class='modify'>modify</a>");
+            echo("<a href='' class='delete'>delete</a>");
+            echo("</div>");
+            while ($row = mysqli_fetch_assoc($displayexe)) {
+                echo ($row['title']);
+                echo ($row['description']);
+                echo ("<img src='data:image/jpg;charset=utf8;base64,".base64_encode($row['image'])."' width='auto' height='auto'>");
+            }
+        }
+        ?>
     </div>
 </body>
 

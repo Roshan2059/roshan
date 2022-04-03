@@ -58,7 +58,7 @@
 <body>
 <!-- <?php include '../partials/navnside.php'; ?> -->
     <form action="">
-        <h1>Add Show</h1>
+        <h1>Add Movie</h1>
         <label for="">Movie name:</label><br>
         <input type="text" name="" id=""><br>
         <label for="">Description:</label><br>

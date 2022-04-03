@@ -23,7 +23,7 @@
         }
         table {
             position: absolute;
-            top: 3vh;
+            top: 10vh;
             left: 15vw;
             border: none;
             width: 80vw;
@@ -35,6 +35,7 @@
         th {
             padding: 30px;
             margin: 10px;
+            font-weight: bolder;
         }
 
         tr {
@@ -58,18 +59,18 @@
         <table>
             <tr>
                 <th>S.N.</th>
-                <th>Full Name</th>
+                <th>Name</th>
                 <th>Booked Seats</th>
                 <th>Movie</th>
                 <th>Date</th>
-                <th>Show Time</th>
+                <th>Time</th>
                 <th>Amount</th>
             </tr>
 
             <tr>
                 <td>1.</td>
                 <td>Pradeep Pandey</td>
-                <td>D1, D2, D3, d4, D6,D1, D2, D3, d4, D6,D1, D2, D3, d4, D6,D1, D2, D3, d4, D6</td>
+                <td>D1, D2, D3, d4</td>
                 <td>Avengers Endgame</td>
                 <td>2022/03/19</td>
                 <td>5:00 PM</td>

@@ -39,6 +39,7 @@
             width: 100vw;
             height: 10vh;
             position: fixed;
+            z-index: 999;
         }
 
         .admin_nav h1 {

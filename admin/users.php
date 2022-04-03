@@ -26,7 +26,7 @@
 
         table {
             position: absolute;
-            top: 3vh;
+            top: 10vh;
             left: 15vw;
             border: none;
             width: 80vw;
@@ -38,6 +38,7 @@
         th {
             padding: 30px;
             margin: 10px;
+            font-weight: bolder;
         }
 
         tr {
@@ -56,123 +57,39 @@
 </head>
 
 <body>
-    <?php include '../partials/navnside.php'; ?>
-    <div class="main">
-        <table>
-            <tr>
-                <th>S.N.</th>
-                <th>Full Name</th>
-                <th>User Name</th>
-                <th>Address</th>
-                <th>Phone no.</th>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>Pradip Pandey</td>
-                <td>Deepan455</td>
-                <td>Gongabu,kathmandu</td>
-                <td>9841000000</td>
-            </tr>
-        </table>
-    </div>
+    <?php include '../partials/navnside.php'; 
+    include '../connection.php';
+    $displayq = "select * from user";
+    $displayexe = mysqli_query($conn, $displayq);
+    $counter = 1;
+    if ($displayexe) {
+        echo ("<table>");
+        echo ("<tr>");
+        echo ("<th>S.N.</th>");
+        echo ("<th>Full Name</th>");
+        echo ("<th>Username</th>");
+        echo ("<th>Address</th>");
+        echo ("<th>Phone no.</th>");
+        echo ("</tr>");
+        while ($row = mysqli_fetch_assoc($displayexe)) {
+            $fname = $row['first_name'];
+            $lname = $row['last_name'];
+            $uname = $row['username'];
+            $address = $row['address'];
+            $phone = $row['phone_number'];
+
+            echo ("<tr>");
+            echo ("<td>$counter</td>");
+            echo ("<td>$fname $lname</td>");
+            echo ("<td>$uname</td>");
+            echo ("<td>$address</td>");
+            echo ("<td>$phone</td>");
+            echo ("</tr>");
+            $counter++;
+        }
+        echo ("</table>");
+    }
+    ?>
 </body>
 
 </html>
