@@ -18,7 +18,9 @@
     </button> -->
     <div>
       <ul class="navbar-nav">
-        <button type="button" class="btn btn-primary nav-item" onclick="location.href='ticket.php';">Book Now</button>
+        <button type="button" class="btn btn-primary nav-item" onclick="location.href='/movieticket/users/browse_movies.php';">Book Now</button>
+
+        <!-- <button type="button" class="btn btn-primary nav-item"> <a href="../users/browse_movies.php"></a> Book Now</button> -->
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php">Home</a>
         </li>

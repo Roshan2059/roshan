@@ -180,9 +180,9 @@
             Actor:
         </p>
         <p class="text">Select movie time</p>
-        <div id="time1">7:00 pm</div>
-        <div class="time2">6:00 pm</div>
-        <div class="time3">5:00 pm</div>
+        <a href="../login.php"><div id="time1">10:00 am</div></a>
+        <a href="../login.php"><div class="time2">2:00 pm</div></a>
+        <a href="../login.php"><div class="time3">5:00 pm</div></a>
     </div>
 </body>
 

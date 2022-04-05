@@ -13,7 +13,7 @@
         <div class="home1">
             <h1>Welcome to, RJ MOVIES</h1>
             <h2><span id="w"><span>Watch</span> </span> <br> Experience the movie </h2>
-            <button>Book Now</button>
+            <a href="/movieticket/users/browse_movies.php"><button>Book Now</button> </a>
         </div>
         <div class="home2">
             <img src="Movie.svg" alt="watching movie" height="485px" width="500px">
@@ -36,9 +36,7 @@
                 technology which not only has the 360&deg; view but also gives
                 our customer the option to interact with the seats on alignment
                 with the movie scenes. We also have a well managed cafeteria in
-                which the foods and drinks are healthy as well as affordable.
-
-                
+                which the foods and drinks are healthy as well as affordable. 
             </p>
         </div>
     </div>

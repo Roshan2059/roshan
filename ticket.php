@@ -250,14 +250,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                         }
                         ?>
                     </div>
-                    
+
                     <div id="status-hint">
-                    <h3 class="hint">Available</h3>
-                    <h3 class="hint">Sold</h3>
-                    <h3 class="hint">Reserved</h3>
-                    <h3 class="hint">Selected</h3>
+                        <div class="hint"><h3>Available</h3></div>
+                        <div class="hint"><h3>Sold</h3></div>
+                        <div class="hint"><h3>Reserved</h3></div>
+                        <div class="hint"><h3>Selected</h3></div>
                     </div>
-                    
                 </div>
             </div>
         </div>
