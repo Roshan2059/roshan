@@ -9,8 +9,8 @@
     --primaryB: #5e00c9;
     --secondary: rgb(253, 22, 115);
     --secondaryB: rgb(248, 96, 126);
-    --positive:green;
-    --positiveB:rgb(98, 189, 98);
+    --positive: green;
+    --positiveB: rgb(98, 189, 98);
     /* --secondaryB: #f4c2c2; */
 
     --background: #EEE6CE;
@@ -51,30 +51,31 @@ body {
 } */
 
 
-#outer1{
+#outer1 {
     display: flex;
     justify-content: center;
     margin-top: 5em;
 }
+
 #seat-container {
     width: 59%;
     text-align: center;
     display: flex;
 }
 
-#screen{
+#screen {
     font-family: constantia;
     border-bottom: 3px solid var(--primaryA);
     width: 80%;
     height: 2px;
     margin-bottom: 20px;
     margin-right: auto;
-    margin-left:auto;
+    margin-left: auto;
 }
 
-#status-hint{
-display: grid;
-background-color: #000;
+#status-hint {
+    display: inline;
+    background-color: red;
 }
 
 #status-hint .hint {
@@ -86,7 +87,7 @@ background-color: #000;
 
 .seats {
     border: 1px solid var(--primaryA);
-    border-radius: 20px;
+    border-radius: 10px;
     height: 18px;
     width: 18px;
     margin: 8px;
@@ -117,11 +118,11 @@ background-color: #000;
     background: rgb(243, 24, 24);
 }
 
-.reservedmine{
+.reservedmine {
     background: var(--positiveB);
 }
 
-.bookedmine{
+.bookedmine {
     background: var(--positive);
 }
 
@@ -145,20 +146,20 @@ background-color: #000;
     display: inline-flex;
     width: 17vw;
     flex-wrap: wrap;
-    margin:40px 5px;
+    margin: 40px 5px;
 }
 
 #zero-box {
     display: inline-flex;
     width: 2vw;
     flex-wrap: wrap;
-    transform: translate(0,20px);
+    transform: translate(0, 20px);
     font-size: 20px;
     margin: 45px 0px;
     height: fit-content;
 }
 
-#buy-ticket{
+#buy-ticket {
     height: 70vh;
     width: 39%;
     display: inline-flex;
@@ -168,31 +169,31 @@ background-color: #000;
     flex-direction: column;
 }
 
-#purchase{
+#purchase {
     margin-top: 1em;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.bnrb{
+.bnrb {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: bolder;
-    color:var(--texttwo);
+    color: var(--texttwo);
     background-color: var(--secondaryB);
     border: 2px solid transparent;
     padding: 15px 55px;
     border-radius: 15px;
 }
 
-.bnrb:hover{
+.bnrb:hover {
     background-color: transparent;
     color: var(--secondary);
     border: 2px solid var(--secondary);
 }
 
-#bill{
+#bill {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     height: 70vh;
@@ -205,11 +206,11 @@ background-color: #000;
     border-radius: 20px;
 }
 
-#bill h2{
-    margin:20px;
+#bill h2 {
+    margin: 20px;
 }
 
-#bill table{
+#bill table {
     text-align: left;
     width: 90%;
     table-layout: fixed;
@@ -219,23 +220,22 @@ background-color: #000;
     border-collapse: collapse;
 }
 
-#bill table td{
+#bill table td {
     text-align: center;
     word-wrap: break-word;
 }
 
-#bill table,td,th,td{
-    border:2px solid var(--texttwo);
+#bill table, td, th, td {
+    border: 2px solid var(--texttwo);
 }
 
-#bill th,td{
+#bill th, td {
     padding: 16px;
 }
 
 /* Styles for navigation */
 
 nav.navbar {
-    background: var(--primary);
     background: linear-gradient(90deg, var(--primaryA) 0%, var(--primary) 100%);
     font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -256,7 +256,7 @@ nav.navbar {
     color: var(--texttwo);
     margin: 0 1em;
     font-family: 'Montserrat', sans-serif;
-    font-size: 35px;    
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -288,7 +288,7 @@ nav.navbar {
     margin: auto 2em;
     border: 2px;
     color: var(--texttwo);
-    background: var(--secondary);   
+    background: var(--secondary);
     border-radius: 7px;
 }
 
@@ -497,51 +497,53 @@ footer div #foot3 {
 
 /* Code from login.php */
 
-.alert-success{
+.alert-success {
     background-color: #28a745;
     border-color: #28a745;
     font-size: 20px;
 }
-.alert-danger{
+
+.alert-danger {
     background-color: #dc3545;
     border-color: #dc3545;
 }
 
-.alert-success .btn-close{
+.alert-success .btn-close {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
 }
-.alert-danger .btn-close{
+
+.alert-danger .btn-close {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
 }
 
-.btn-close{
+.btn-close {
     padding: 0.25rem 0.5rem;
     font-size: 1.25rem;
     line-height: 1;
     border-radius: 0.25rem;
 }
 
-.btn-close:hover{
+.btn-close:hover {
     color: var(--texttwo);
     background-color: #d73925;
     border-color: #d73925;
 }
 
-.container{
+.container {
     margin: 5em auto;
     width: 20%;
     background-color: var(--secondary);
-    border-radius:20px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
     box-shadow: 6px 6px 15px 1px gray;
 }
 
-.dha{
+.dha {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -549,7 +551,7 @@ footer div #foot3 {
     padding-bottom: 1em;
 }
 
-.text-center{
+.text-center {
     padding-top: 0.5em;
     margin-bottom: 0.5em;
     text-align: center;
@@ -559,7 +561,7 @@ footer div #foot3 {
     color: var(--texttwo);
 }
 
-.form-label{
+.form-label {
     margin-top: 10em;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
@@ -567,7 +569,7 @@ footer div #foot3 {
     color: var(--texttwo);
 }
 
-.form-control{
+.form-control {
     padding: 5px;
     width: 90%;
     display: inline-block;
@@ -577,7 +579,7 @@ footer div #foot3 {
     font-size: 17px;
 }
 
-.form-control:focus{
+.form-control:focus {
     outline: none;
 }
 
@@ -585,12 +587,12 @@ footer div #foot3 {
     color: #888;
 }
 
-.mb-3{
+.mb-3 {
     margin-bottom: 0.5em;
     margin-left: 1em;
 }
 
-#sub-btn{
+#sub-btn {
     background: #5e00c9;
     border-color: #28a745;
     height: 2em;
@@ -604,7 +606,7 @@ footer div #foot3 {
     margin-bottom: 0.5em;
 }
 
-#sub-btn:hover{
-    background: #6f00f9; 
+#sub-btn:hover {
+    background: #6f00f9;
     cursor: pointer;
 }

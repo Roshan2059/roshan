@@ -177,10 +177,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     ];
 
     ?>
-    <!-- // <div class="first-container">
-    //         <span class="big">MUSK Theater</span>
-    //          <span class="small">online ticket reservation</span>   
-    // </div> -->
+
     <?php require 'partials/_nav.php'; ?>
     <div id="outer1">
         <div id="seat-container">
@@ -252,10 +249,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     </div>
 
                     <div id="status-hint">
-                        <div class="hint"><h3>Available</h3></div>
-                        <div class="hint"><h3>Sold</h3></div>
-                        <div class="hint"><h3>Reserved</h3></div>
-                        <div class="hint"><h3>Selected</h3></div>
+                        <div class="hint">
+                            <h3>Available</h3>
+                        </div>
+                        <div class="hint">
+                            <h3>Sold</h3>
+                        </div>
+                        <div class="hint">
+                            <h3>Reserved</h3>
+                        </div>
+                        <div class="hint">
+                            <h3>Selected</h3>
+                        </div>
                     </div>
                 </div>
             </div>

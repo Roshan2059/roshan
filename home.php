@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>RJ MOVIES</title>
-  </head>
-  <body>
-    <?php require 'partials/_nav.php'?>
+</head>
+
+<body>
+    <?php require 'partials/_nav.php' ?>
     <div id="home">
         <div class="home1">
             <h1>Welcome to, RJ MOVIES</h1>
@@ -36,7 +38,7 @@
                 technology which not only has the 360&deg; view but also gives
                 our customer the option to interact with the seats on alignment
                 with the movie scenes. We also have a well managed cafeteria in
-                which the foods and drinks are healthy as well as affordable. 
+                which the foods and drinks are healthy as well as affordable.
             </p>
         </div>
     </div>
@@ -67,7 +69,7 @@
                     <li><i class="fab fa-facebook"></i></li>
                     <li><i class="fab fa-youtube"></i></li>
                     <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>   
+                    <li><i class="fab fa-instagram"></i></li>
                 </ul>
 
             </div>
@@ -75,8 +77,9 @@
         <div id="last">
             <p>&copy; RJ MOVIES 2017-2022 &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved</p>
         </div>
-      </footer>
-      <script src="stylescript.js"></script>
-      <script src="https://kit.fontawesome.com/902b67489c.js" crossorigin="anonymous"></script>
-  </body>
+    </footer>
+    <script src="stylescript.js"></script>
+    <script src="https://kit.fontawesome.com/902b67489c.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

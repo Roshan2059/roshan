@@ -8,7 +8,3 @@
     if(!$conn){
         die("Database Connection failed: ".mysqli_connect_error());
     }
-    else{
-        
-    }
-?>

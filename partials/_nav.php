@@ -22,11 +22,11 @@
 
         <!-- <button type="button" class="btn btn-primary nav-item"> <a href="../users/browse_movies.php"></a> Book Now</button> -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="/movieticket/home.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/movieticket/welcome.php#about_us">About Us</a>
+          <a class="nav-link active" aria-current="page" href="/movieticket/home.php#about_us">About Us</a>
         </li>
         <?php
           if($loggedin)

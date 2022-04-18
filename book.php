@@ -54,8 +54,6 @@
                 $listresult = mysqli_query($conn,$listsql);
             }
 
-
-
             //Returning data to frontend
             $arr = array(
                 "message"=>$_SESSION['userid']
@@ -83,4 +81,3 @@
         print json_encode($arr,true);
     }
     die();
-?>
