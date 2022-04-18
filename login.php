@@ -18,7 +18,7 @@
       $username = $_POST['username'];
       $password = $_POST['password'];
 
-      $sql = "SELECT * FROM user where username='$username' AND password = '$password'";
+      $sql = "SELECT * FROM user where username='$username'";
       $result = mysqli_query($conn, $sql);
       $num = mysqli_num_rows($result);
       $userinfo = mysqli_fetch_assoc($result);
