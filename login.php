@@ -36,19 +36,26 @@
       // }
 
       if ($userinfo["usertype"] == "user") {
-        $login = true;
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $_SESSION['usernmae'] = $username;
-        $_SESSION['userid'] = $userinfo['user_id'];
-        header("location: ticket.php");
+        if (password_verify($password, $userinfo['password'])) {
+          $login = true;
+          session_start();
+          $_SESSION['loggedin'] = true;
+          $_SESSION['usernmae'] = $username;
+          $_SESSION['userid'] = $userinfo['user_id'];
+          header("location: ticket.php");
+        }
       }
 
       if ($userinfo["usertype"] == "admin") {
-        header("location: admin/dashboard.php");
-      }
-    } else {
-      $showError = true;
+        if (password_verify($password, $userinfo['password'])) {
+          $login = true;
+          session_start();
+          $_SESSION['loggedin'] = true;
+          $_SESSION['usernmae'] = $username;
+          $_SESSION['userid'] = $userinfo['user_id'];
+          header("location: admin/dashboard.php");
+        }
+      } 
     }
   }
   ?>
