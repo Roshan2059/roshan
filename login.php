@@ -21,6 +21,7 @@
       $sql = "SELECT * FROM user where username='$username'";
       $result = mysqli_query($conn, $sql);
       $num = mysqli_num_rows($result);
+      echo $num;
       $userinfo = mysqli_fetch_assoc($result);
 
       // if($num == 1 )
@@ -36,6 +37,8 @@
       // }
 
       if ($userinfo["usertype"] == "user") {
+        echo ($password);
+        // echo ($userinfo['password']);
         if (password_verify($password, $userinfo['password'])) {
           $login = true;
           session_start();
