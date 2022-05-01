@@ -8,51 +8,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-        }
-        form {
-            width: 30vw;
-            height: 90vh;
-            padding: 20px;
-            margin-right: auto;
-            margin-left: auto;
-            position: relative;
-        }
-        textarea {
-            font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-        }
-        label {
-            font-size: 20px;
-        }
-        input {
-            padding: 0.5em;
-            font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-        }
-        a {
-            text-decoration: none;
-            padding: 8px;
-            background-color: blue;
-            color: white;
-            border-radius: 5px;
-            position: absolute;
-            left: 15vw;
-        }
-        a:hover {
-            color: white;
-            background-color: springgreen;
-        }
-    </style>
+    <link rel="stylesheet" href="add_movies.css">
 </head>
 
 <body>
