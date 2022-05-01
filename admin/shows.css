@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    --primary: #5e00c9;
+    --primaryA: #313552;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.add {
+    position: absolute;
+    top: 5vh;
+    left: 70vw;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    box-sizing: border-box;
+    background-color: springgreen;
+    text-decoration: none;
+    color: white;
+}
+
+.add a:hover {
+    background-color: aqua;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    height: 90vh;
+    width: 85vw;
+}
+
+.box {
+    position: relative;
+    width: 15vw;
+    height: 40vh;
+    left: 5vw;
+    top: 10vh;
+    margin: 2vw;
+    box-sizing: border-box;
+    background-image: url(../images/ae.jpg);
+    background-size: 100% 100%;
+}
+
+.datetime {
+    position: absolute;
+    width: 12vw;
+    height: 8vh;
+    left: 1vw;
+    top: 32vh;
+    font-size: 20px;
+    line-height: 4vh;
+    color: white;
+}
