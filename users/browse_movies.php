@@ -10,10 +10,10 @@
 <body>
   <div class="topbox">Now showing</div>
   <div class="container">
-    <a href="choose_time.php"><div class="boxes"></div></a>
-    <a href="choose_time.php"><div class="boxes"></div></a>
-    <a href="choose_time.php"><div class="boxes"></div></a>
-    <a href="choose_time.php"><div class="boxes"></div></a>
+    <a href="choose_time.php"><div class="boxes" name="movie_1"></div></a>
+    <a href="choose_time.php"><div class="boxes" name="movie_2"></div></a>
+    <a href="choose_time.php"><div class="boxes" name="movie_3"></div></a>
+    <a href="choose_time.php"><div class="boxes" name="movie_4"></div></a>
   </div>
 </body>
 </html>

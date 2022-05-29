@@ -21,9 +21,42 @@
             Actor:
         </p>
         <p class="text">Select movie time</p>
-        <a href="../login.php"><div id="time1">10:00 am</div></a>
-        <a href="../login.php"><div class="time2">2:00 pm</div></a>
-        <a href="../login.php"><div class="time3">5:00 pm</div></a>
+        <a href="../login.php"><div id="time1">
+            <?php
+            $time = "10:00 pm";
+            echo $time;
+            ?>
+        </div></a>
+        <a href="../login.php"><div class="time2">
+            <?php
+            $time = "2:00 pm";
+            echo $time;
+            ?>
+        </div></a>
+        <a href="../login.php"><div class="time3">
+            <?php
+            $time = "5:00 pm";
+            echo $time;
+            ?>
+            </div></a>
+
+        <!-- <?php
+        // if(isset($_SESSION['userid'])){
+        //     echo '<a href="../ticket.php"><div id="btn">Checkout</div></a>';
+        // }
+        // else{
+        //     echo '<a href="../login.php"><div id="btn">Checkout</div></a>';
+        // }
+        ?>
+
+        <?php
+        // if(isset($_SESSION['userid'])){
+        //     echo '<a href="../users/browse_movies.php"><div id="btn">Back to homepage</div></a>';
+        // }
+        // else{
+        //     echo '<a href="../login.php"><div id="btn">Back to homepage</div></a>';
+        // }
+        ?> -->
     </div>
 </body>
 

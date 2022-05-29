@@ -13,7 +13,7 @@
     --positiveB: rgb(98, 189, 98);
     /* --secondaryB: #f4c2c2; */
 
-    --background: #EEE6CE;
+    --background: whitesmoke;
     --textone: black;
     --texttwo: white;
 }
@@ -40,6 +40,7 @@ body {
 .first-container .big {
     padding-left: 30px;
     font-size: 50px;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -236,6 +237,8 @@ body {
 
 nav.navbar {
     background: linear-gradient(90deg, var(--primaryA) 0%, var(--primary) 100%);
+    background: linear-gradient(90deg, #5e00c9 0%, rgb(255, 118, 141) 100%);
+
     font-family: 'Montserrat', sans-serif;
     width: 100%;
 }
@@ -496,41 +499,6 @@ footer div #foot3 {
 
 /* Code from login.php */
 
-.alert-success {
-    background-color: #28a745;
-    border-color: #28a745;
-    font-size: 20px;
-}
-
-.alert-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.alert-success .btn-close {
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-.alert-danger .btn-close {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.btn-close {
-    padding: 0.25rem 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    border-radius: 0.25rem;
-}
-
-.btn-close:hover {
-    color: var(--texttwo);
-    background-color: #d73925;
-    border-color: #d73925;
-}
 
 .container {
     margin: 5em auto;

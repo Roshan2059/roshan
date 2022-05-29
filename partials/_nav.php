@@ -1,13 +1,11 @@
 <?php
-  if(!isset($_SESSION))
-  {
-    session_start();
-  }
-  $loggedin = false;
-  if(isset($_SESSION['loggedin'])&& $_SESSION['loggedin']==true)
-  {
-    $loggedin = true;
-  }
+if (!isset($_SESSION)) {
+  session_start();
+}
+$loggedin = false;
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  $loggedin = true;
+}
 ?>
 
 <nav class="navbar">
@@ -29,24 +27,24 @@
           <a class="nav-link active" aria-current="page" href="/movieticket/home.php#about_us">About Us</a>
         </li>
         <?php
-          if($loggedin)
-          {
+        if ($loggedin) {
           echo '
           
           <li class="nav-item">
+            <a class="nav-link" href="/movieticket/users/my_bookings.php">My bookings</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/movieticket/logout.php">logout</a>
           </li>';
-          }
-          else
-          {
-            echo '
+        } else {
+          echo '
             <li class="nav-item">
               <a class="nav-link" href="/movieticket/login.php">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/movieticket/signup.php">Signup</a>
             </li>';
-          }
+        }
         ?>
       </ul>
       <!-- <form class="d-flex">

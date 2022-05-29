@@ -13,11 +13,24 @@
 
 <body>
     <?php include '../partials/navnside.php'; ?>
+    <?php include '../connection.php'; ?>
 
     <div class="main">
         <div class="box">
             <h1>Now showing movies:</h1>
-            <h1>Avengers</h1>
+            <?php
+            $sql = "SELECT * FROM movies";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='movie-box'>";
+                    echo "<h2>" . $row['movie_name'] . "</h2>";
+                    echo "<img src='" . $row['movie_image'] . "' alt='" . $row['movie_name'] . "'>";
+                    echo "<p>" . $row['movie_description'] . "</p>";
+                    echo "</div>";
+                }
+            }
+            ?>
         </div>
 
         <div class="box">
@@ -37,10 +50,25 @@
 
         <div class="box">
             <h1>Available Seats:</h1>
+            <br>
+            <h2>
+                <?php
+
+                ?>
+            </h2>
         </div>
 
         <div class="box">
             <h1>No. of users:</h1>
+            <br>
+            <h2>
+                <?php
+                $sql = 'select * from user';
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_num_rows($result);
+                echo $row;
+                ?>
+            </h2>
         </div>
     </div>
 

@@ -9,9 +9,6 @@
 </head>
 
 <body>
-
-
-
   <?php
   require 'partials/_nav.php';
   include 'connection.php';
@@ -59,7 +56,7 @@
           $_SESSION['showUserSucess'] = true;
           header("location: admin/dashboard.php");
         }
-      }else{
+      } else {
         $showError = true;
       }
     }

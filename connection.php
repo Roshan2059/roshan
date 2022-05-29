@@ -2,7 +2,7 @@
     $server_name = "localhost";
     $user_name = "root";
     $password = "";
-    $db = "movie_ticket";
+    $db = "rj_movies";
     $conn = mysqli_connect($server_name,$user_name,$password,$db);
 
     if(!$conn){

@@ -1,5 +1,5 @@
 .topbox{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     position: absolute;
     top: 10px;
     left:50%;
@@ -8,6 +8,10 @@
     font-size: 2em;
     font-weight: bolder;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  body{
+    background-color: whitesmoke;
   }
   .container{
     padding: 10px;

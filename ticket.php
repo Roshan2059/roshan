@@ -289,8 +289,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             </div>
 
             <div id="purchase">
-                <button id="buy-button" class="bnrb">Buy Ticket</button>
-                <button id="rsrv-button" class="bnrb">Reserve Ticket</button>
+            <a href="users/checkout.php"><button id="buy-button" class="bnrb"> Buy Ticket</button></a>
+               <a href="users/checkout.php"><button id="rsrv-button" class="bnrb"> Reserve Ticket </button></a>
             </div>
 
         </div>

@@ -22,6 +22,10 @@
         </div>
     </div>
 
+    <div>
+        <?php require './users/browse_movies.php'?>
+    </div>
+
     <div id="about_us">
         <div class="au_content">
 

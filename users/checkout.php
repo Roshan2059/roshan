@@ -13,14 +13,15 @@
   <div class="frame">
     <p id="text1">Seats Reserved Successfully <br>
     </p>
-    <p id="text4">Don't forget to enjoy the movie ;) ;)</p>
+    <p id="text4">Don't forget to enjoy the movie</p>
     <p id="text2">Reservation Summary <br><br>
       Reserve seats: <br>
       Transaction amount:</p>
     <br><br>
-    <div id="btn"><button>Print ticket</button></div>
+    <!-- <div id="btn"><button>Print ticket</button></div> -->
     <br><br>
     <p id="text3">Note: Kindly print the ticket and bring that to the cinema hall premises.</p>
+    <a href="../home.php"><button>Back to homepage</button></a>
   </div>
 
 </body>
